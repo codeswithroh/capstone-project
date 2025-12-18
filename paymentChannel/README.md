@@ -1,26 +1,22 @@
 # PaymentChannel
 
-## Project structure
+Contracts, wrappers, scripts, and tests for the TON payment channel.
 
--   `contracts` - source code of all the smart contracts of the project and their dependencies.
--   `wrappers` - wrapper classes (implementing `Contract` from ton-core) for the contracts, including any [de]serialization primitives and compilation functions.
--   `tests` - tests for the contracts.
--   `scripts` - scripts used by the project, mainly the deployment scripts.
+## Structure
+- **`contracts/`**: Tolk smart contracts for the payment channel.
+- **`wrappers/`**: TypeScript wrappers and helpers for compile/serialization.
+- **`scripts/`**: Task scripts (deploy, close, etc.).
+- **`tests/`**: Contract tests.
 
-## How to use
+## Quick start
+```bash
+# from paymentChannel/
+npm install
+npm test
 
-### Build
+# run scripts (examples)
+npm run ts-node scripts/deployPaymentChannel.ts
+npm run ts-node scripts/closePaymentChannel.ts
+```
 
-`npx blueprint build` or `yarn blueprint build`
-
-### Test
-
-`npx blueprint test` or `yarn blueprint test`
-
-### Deploy or run another script
-
-`npx blueprint run` or `yarn blueprint run`
-
-### Add a new contract
-
-`npx blueprint create ContractName` or `yarn blueprint create ContractName`
+See `scripts/` for more utilities.
